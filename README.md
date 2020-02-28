@@ -1,50 +1,194 @@
 # Project 1 @cmda-minor-web · 2019-2020
 
-## Zoek in de de collectie van de OBA
+## Take a look inside the collection of the Openbare Bibliotheek Amsterdam
+The project is based at the 'Centrale OBA'. The kickoff started at monday, followed by the presentations of the results on friday. In this week, every student in this course will build a prototype that visitors can use to help them find items from the OBA-collection.
 
-Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.00 uur de kickoff, vrijdag zijn de presentaties van de resultaten. In een week bouwt iedere student een eigen prototype dat bezoekers kan helpen om items uit de OBA collectie te vinden. Technieken geleerd bij [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) worden toegepast bij het bouwen van de de prototypes.
+[link to deploy][screenshot of website]
 
-## Programma
-We verzamelen maandagochtend om 09.45 op de 1e verdieping van de Centrale OBA, [Oosterdokskade 143](https://www.google.com/maps/place/OBA+library+of+Amsterdam/@52.3756983,4.9082087,15z/data=!4m2!3m1!1s0x0:0x6b97f693e6ecb494?ved=2ahUKEwioo6OrzubgAhWLNOwKHR6KDQgQ_BIwCnoECAYQCA).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
 
-## Werkwijze en Criteria
-### Werkwijze
-Full-time week werken aan (technisch) bewijzen van een concept-idee. Vrijdag is de pitch! Student laat zien dat hij/zij de vakken [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) begrijpt en beheerst.
 
-Iedere dag zijn er coaches aanwezig voor coaching en feedback. We sluiten de dag af met een stand up, om de status door te spreken. Waar ben je mee bezig? Loop je ergens vast of heb je hulp nodig? Waar sta je?
+<details>
+  <summary><strong>Table of Contents</strong> (click to expand)</summary>
 
-### Beoordeling
-Tijdens de beoordeling krijg je feedback op het resultaat en op je functioneren. De vakdocenten kijken naar je code en beoordelen In hoeverre je in het project laten zien dat je de bijhorende vakken beheerst en goed hebt toegepast. Lifely is geïnteresseerd in hoeverre je oplossing voldoet aan de eisen die zijzelf stellen aan hun producten. Misschien laat je wel wat zien waar ze zelf nog niet aan gedacht hebben?
+<!-- toc -->
 
-Het project telt als AVV mee met de Meesterproef.
+- [✅ To-do](#--to-do)
+- [📋 Concept](#---concept)
+- [⚙️ Installation](#---installation)
+- [🧑🏼‍ Actor Diagram](#------actor-diagram)
+- [↔️ Interaction diagram](#---interaction-diagram)
+- [🌍 Design patterns](#---design-patterns)
+- [👍🏽 Best practices](#-----best-practices)
+- [🗃 Data](#---data)
+  * [🐒 Github API](#---github-api)
+    + [Endpoint(s)](#endpoint-s-)
+    + [Rate limiting](#rate-limiting)
+  * [💽 Data cleaning](#---data-cleaning)
+- [👯🏿‍ Features (+ wishlist)](#------features----wishlist-)
+- [🏫 Assignment](#---assignment)
+  * [Learning goals](#learning-goals)
+  * [Week 1 - Hello API 🐒](#week-1---hello-api---)
+  * [Week 2 - Design and Refactor 🛠](#week-2---design-and-refactor---)
+  * [Week 3 - Wrapping up 🎁](#week-3---wrapping-up---)
+  * [Rubric](#rubric)
+- [ℹ️ Resources](#---resources)
+  * [Credits](#credits)
+  * [Small inspiration sources](#small-inspiration-sources)
+- [🗺️ License](#----license)
 
-### Feedback over functioneren
-Je hebt een leergierig, gedreven en zelfredzame houding nodig om de minor te kunnen halen. Welke vaardigheden heb je laten zien? Onderzoekend vermogen? Creativiteit? Conceptueel? In hoeverre komen je houding en verworven vaardigheden overeen met wat een frontender in de praktijk nodig heeft?
+<!-- tocstop -->
 
-### Feedback over Web App from Scratch
-In het vak [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) heb je geleerd een web app te maken zonder frameworks of onnodige libraries, dus zoveel mogelijk met native HTML, CSS & JavaScript. Het eindproduct is een modulair opgezet prototype voor een single page web app. Data wordt opgehaald uit een externe API, waar nodig gemanipuleerd en vervolgens getoond in de Web App. Je leert hoe structuur aan te brengen in je code en hoe je hiermee 'from scratch' een web app kan maken.
+</details>
 
-### Feedback over CSS to the Rescue
-In het vak [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) heb je geleerd over de (brede) scope van CSS, over Progressive Enhancement, de _cascase_, _inheritance_ en _specifity_. Het is belangrijk om deze basisprincipes van CSS goed te begrijpen. Niet alleen op praktisch niveau, ook op experimenteel niveau. Zonder goed begrip van de basisprincipes is CSS magisch en weird. Met een goed begrip heb je CSS onder controle en kan je het laten doen wat jij wil. En dat is nodig om webpagina’s vorm te geven met attention to detail; webpagina’s waar mensen blij van worden.
+## ✅ To-do
+- [x] First item
+- [ ] Second item
 
-### Oplevering & criteria
-- Presentatie met je bevindingen bij de OBA. 
-- Github met je code en readme.
+## 📋 Concept
+_What does your app do, what is the goal? (passing butter)_ 
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
 
-<!-- ☝️ replace this description with a description of your own work -->
+## ⚙️ Installation
+Clone this repository to your own device:
+```bash
+$ git clone https://github.com/deannabosschert/web-app-from-scratch-1920.git
+```
+Then, navigate to this folder and run:
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+```bash
+python -m SimpleHTTPServer 8000`
+```
+, or: 
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+```bash
+npm install
+```
 
-<!-- Maybe a table of contents here? 📚 -->
+#### Dependencies
+```json
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "scripts": {
+    "iets": "iets"
+  },
+  "devDependencies": {
+    "iets": "*"
+  }
+}
+```
 
-<!-- How about a section that describes how to install this project? 🤓 -->
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+## 🧑🏼‍ Actor Diagram
+_Which actors are there in your application? (actor diagram)_
+![actor diagram](https://github.com/deannabosschert/template/blob/master/src/img/actordiagram.png)
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+## ↔️ Interaction diagram
+_How does flowed interaction through the application? (interaction diagram)_
+![interaction diagram](https://github.com/deannabosschert/template/blob/master/src/img/interactiondiagram.png)
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+## 🌍 Design patterns
+
+- opsomming
+- van
+- patterns
+
+## 👍🏽 Best practices
+
+- Work in branches, even if it's a one-man project. It helps staying focused on one feature until it's finished, and keeps your from doing 10 different things at the same time. Saves you merge conflicts, too.
+- ^ also helps with 'closing' a feature, so you are more likely to move on to the next. Too little time, too much ideas.
+- Commit early, commit often.
+- Make single-purpose commits.
+- Always fix your .gitignore-contents asap; node_modules or the like won't ever be pushed that way. 
+- Styling comes last. It's gonna change anyways so most of the time, it's better to fix the technical stuff first.
+- Don't use declarations in the global scope.
+- Start your project with writing down the future function names (pre-actors, basically).
+- Make your own template for your readme
+- Google, google, google. 99% of the time, it'll get you to the solution of your problem.
+- Set timers for solving problems that aren't super relevant in the current sprint but you do would like to work on; 25 mins tops, otherwise you'll be stuck with this for too long.
+- Make an actor diagram halfway through, it's a great reminder to refactor the code.
+- Explicitly limit the scope of your functions
+- Remember that most problems/features that have to do with the UI, can be fixed with mainly CSS.
+- Do not use .innerHTML
+- If there's an error, walk through your code from the top/beginning; explain it to your rubber ducky and state where certain data is passed.
+- Implement useful error handling.
+
+## 🗃 Data
+
+### 🐒 API
+_What external data source is featured in your project and what are its properties?_ 
+
+Somethingsomething
+
+#### Properties
+
+#### Rate limiting
+
+### 💽 Data cleaning
+_What has been done with the fetched data?_What has been done with the initial data? Cleaning pattern?
+
+```js
+```
+
+outcome:
+```json
+```
+
+## 👯🏿‍ Features (+ wishlist)
+_What would you like to add (feature wishlist / backlog)?_ 
+
+- [x] one thing
+- [ ] second something
+- [ ] third thing
+
+
+## 🏫 Assignment
+<details>
+  <summary></strong> (click to expand)</summary>
+  
+## Take a look inside the collection of the Openbare Bibliotheek Amsterdam
+The project is based at the 'Centrale OBA'. The kickoff started at monday, followed by the presentations of the results on friday. In this week, every student in this course will build a prototype that visitors can use to help them find items from the OBA-collection.
+
+## Learning goals
+- Techniques used at the [web app from scratch](https://github.com/deannabosschert/web-app-from-scratch-1920)-course are implemented
+- Techniques used at the [css to the rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1920)-course are implemented
+- Independent development
+
+
+### Week 1 - title 🐒
+
+Goal: xxx
+--> hoe heb ik dit gedaan? --> verwijzing naar wiki, of inklappen?
+
+### Week 2 - title 🛠
+
+Goal: xxx
+
+### Week 3 - title 🎁
+
+Goal: xxx
+
+</details>
+
+### Rubric
+
+[Rubric- detailed rating of my project](https://github.com/deannabosschert/template/wiki/Rubric)
+![rubric](https://github.com/deannabosschert/template/blob/master/src/img/rubric.png)
+
+## ℹ️ Resources
+
+### Credits
+
+- Our superamazingteachers at the [minor WebDev @CMD](https://github.com/cmda-minor-web/)
+
+### Small inspiration sources
+
+- one source
+- second source
+
+## 🗺️ License
+
+Author: [Deanna Bosschert](https://github.com/deannabosschert) , license by
+[MIT](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/LICENSE)
+
