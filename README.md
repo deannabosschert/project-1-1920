@@ -3,9 +3,12 @@
 ## Take a look inside the collection of the Openbare Bibliotheek Amsterdam
 The project is based at the 'Centrale OBA'. The kickoff started at monday, followed by the presentations of the results on friday. In this week, every student in this course will build a prototype that visitors can use to help them find items from the OBA-collection.
 
-[link to deploy][screenshot of website]
+### Digital education/paperenvironment
+Create an (/ a part of) online paper-assistent that assists with choosing sources (media carriers) based on the OBA-API. Make sure that it's a child-friendly environment in which you can develop yourself with filter, sort and insights in your personal environment.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/wafs/deploys)
+[https://oba-project.netlify.com/][screenshot of website]
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9aec17a8-142c-40c1-a2b2-ad3e73f9f652/deploy-status)](https://app.netlify.com/sites/oba-project/deploys)
 
 
 <details>
@@ -47,7 +50,7 @@ The project is based at the 'Centrale OBA'. The kickoff started at monday, follo
 
 ## 📋 Concept
 _What does your app do, what is the goal? (passing butter)_ 
-
+This is an online paper-assistent that assists with choosing sources (media carriers), based on the OBA-API. It's a child-friendly environment in which you can develop yourself with filter, sort and insights in your personal environment.
 
 ## ⚙️ Installation
 Clone this repository to your own device:
