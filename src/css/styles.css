@@ -40,11 +40,11 @@ section[data-route="/"]:active {
   z-index: 5;
 }
 
-section[data-route="books"]:active {
+section[data-route="boeken"]:active {
   position: absolute;
   z-index: 5;
 }
-section[data-route="profile"]:active {
+section[data-route="detail"]:active {
   position: absolute;
   z-index: 5;
 }
