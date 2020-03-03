@@ -30,6 +30,20 @@ const apiGet = {
         console.log(err)
       })
   },
+  books: () => {
+    fetch(url, config)
+      .then(res => {
+        return res.json()
+      })
+      .then(json => {
+        const data = json.results
+        console.log('bookdata from API loaded, now storing')
+        Data.store('books', data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
   detail: () => {
     fetch(url, config)
       .then(res => {
