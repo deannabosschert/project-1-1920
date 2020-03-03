@@ -4,7 +4,7 @@ import {
 
 
 const Routes = {
-  handle: function() {
+  handle: () => {
     routie({
       '': () => {
         Data.get('overview')
