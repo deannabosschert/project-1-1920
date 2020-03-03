@@ -1,21 +1,21 @@
 import {
-  data
+  Data
 } from "./data.js"
 
 
-const routes = {
+const Routes = {
   handle: function() {
     routie({
       '': () => {
-        data.get('overview')
+        Data.get('overview')
         updatePageUI('/')
       },
       books: () => {
-        data.get('books')
+        Data.get('books')
         updatePageUI('books')
       },
       '/:id': () => {
-        data.get('detail')
+        Data.get('detail')
         updatePageUI('detail')
       }
 
@@ -34,5 +34,5 @@ function updatePageUI(route) {
 
 
 export {
-  routes
+  Routes
 }
