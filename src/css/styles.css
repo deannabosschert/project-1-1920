@@ -26,8 +26,27 @@ section {
 
 }
 
-.genres{
+section {
+  opacity: 0;
+  margin: 0.5rem;
+  /* display: flex; */
+  /* background-color: light grey; */
+  text-align: center;
+  position: absolute;
+}
 
+section[data-route="/"]:active {
+  position: absolute;
+  z-index: 5;
+}
+
+section[data-route="books"]:active {
+  position: absolute;
+  z-index: 5;
+}
+section[data-route="profile"]:active {
+  position: absolute;
+  z-index: 5;
 }
 
 article {
@@ -72,6 +91,10 @@ img {
   margin-right: 3vw;
 }
 /* STATE */
+
+.active {
+  opacity: 1;
+}
 
 section:hover #naald{
   /* transform: rotate(360deg); */

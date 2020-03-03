@@ -1,9 +1,9 @@
 import {
-  getData
-} from "./modules/API.js"
+  routes
+} from "./modules/routes.js"
 
 async function init() {
-  getData()
+  routes.handle()
 }
 
 init()
