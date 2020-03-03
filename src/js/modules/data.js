@@ -1,35 +1,39 @@
 import {
-  render
+  Render
 } from "./render.js"
 
 import {
   apiGet
 } from "./API.js"
 
-const data = {
+const Data = {
   get: function(route) {
-    if (window.localStorage.length === null) {
+    const storage = window.localStorage
+    if (storage.getItem(`"${route}"`) === null) {
       console.log("nog geen data in je localStorage, incoming!")
-      apiGet[`"${route}"`]()
+      apiGet[`${route}`]()
+      return
     } else {
       console.log("nu zit er (wel) data in je localStorage 🤓")
-      data.parse(route)
+      Data.parse(route)
     }
   },
   store: function(route, routeData) {
-    localStorage.setItem(`"${routeData}"`, JSON.stringify(routeData))
-    data.parse(route, routeData)
+    localStorage.setItem(`"${route}"`, JSON.stringify(routeData))
+    console.log('data stored')
+    Data.parse(route)
   },
-  parse: function(route, routeData) {
-    const currentRoute = route
-    const currentData = JSON.parse(localStorage.getItem(`"${routeData}"`))
-    data.render(currentRoute, currentData)
+  parse: function(route) {
+    const data = JSON.parse(localStorage.getItem(`"${route}"`))
+    console.log('data parsed')
+    Data.render(route, data)
   },
-  render: function(currentRoute, currentData) {
-    render[`"${currentRoute}"`](currentData)
+  render: function(route, data) {
+    console.log('data going to render')
+    Render[`${route}`](data)
   }
 }
 
 export {
-  data
+  Data
 }
