@@ -8,8 +8,7 @@ import {
 
 const Data = {
   get: (route) => {
-    const storage = window.localStorage
-    if (storage.getItem(`"${route}"`) === null) {
+    if (window.localStorage.getItem(`"${route}"`) === null) {
       console.log("nog geen data in je localStorage, incoming!")
       apiGet[`${route}`]()
       return
@@ -18,8 +17,8 @@ const Data = {
       Data.parse(route)
     }
   },
-  store: (route, routeData) => {
-    localStorage.setItem(`"${route}"`, JSON.stringify(routeData))
+  store: (route, data) => {
+    localStorage.setItem(`"${route}"`, JSON.stringify(data))
     console.log('data stored')
     Data.parse(route)
   },
