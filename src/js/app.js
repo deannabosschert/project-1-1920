@@ -1,9 +1,9 @@
 import {
-  routes
+  Routes
 } from "./modules/routes.js"
 
 async function init() {
-  routes.handle()
+  Routes.handle()
 }
 
 init()
