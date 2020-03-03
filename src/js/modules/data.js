@@ -7,7 +7,7 @@ import {
 } from "./API.js"
 
 const Data = {
-  get: function(route) {
+  get: (route) => {
     const storage = window.localStorage
     if (storage.getItem(`"${route}"`) === null) {
       console.log("nog geen data in je localStorage, incoming!")
@@ -18,17 +18,17 @@ const Data = {
       Data.parse(route)
     }
   },
-  store: function(route, routeData) {
+  store: (route, routeData) => {
     localStorage.setItem(`"${route}"`, JSON.stringify(routeData))
     console.log('data stored')
     Data.parse(route)
   },
-  parse: function(route) {
+  parse: route => {
     const data = JSON.parse(localStorage.getItem(`"${route}"`))
     console.log('data parsed')
     Data.render(route, data)
   },
-  render: function(route, data) {
+  render: (route, data) => {
     console.log('data going to render')
     Render[`${route}`](data)
   }
