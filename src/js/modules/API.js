@@ -6,8 +6,8 @@ import {
 const cors = 'https://cors-anywhere.herokuapp.com/';
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
 const query = 'tolkien';
-const key = '1e19898c87464e239192c8bfe422f280';
-const secretKey = '4289fec4e962a33118340c888699438d';
+const key = '76f45dfa187d66be5fd6af05573eab04';
+const secretKey = '2cb15758acac08d6ebe6f5ac7a293d69';
 const detail = 'Default';
 const url = `${cors}${endpoint}${query}&authorization=${key}&detaillevel=${detail}&output=json`;
 
