@@ -13,30 +13,58 @@
 <body>
   <header id="top">
     <h1>openbare bibliotheek amsterdam</h1>
-    <h2>titel</h2>
+    <h2>werkstukassistent</h2>
   </header>
   <main>
-    <section id="overview">
-          <article class="book">
-            <h3 class="title"></h3>
-            <p class="summary"></p>
-            <a class="detailLink">
-              <div class="coverWrapper">
-                <img class="coverImage" id="coverIMG">
-              </div>
-            </a>
-            <p class="authors"></p>
-            <p class="id"></p>
-            <p class="publisher"></p>
-            <p class="genres"></p>
-            <p class="languages"></p>
-            <p class="note"></p>
-          </article>
-    </section>
-    <!-- <ul>
+    <ul>
       <li><a href="#/">Home</a></li>
-      <li><a href="#stats">Stats</a></li>
+      <li><a href="#books">Books</a></li>
     </ul>
+    <div class="sectionWrapper">
+      <section data-route="/" id="/src/" class="active">
+        <h2> Overviewdingen </h2>
+        <div id="overview">
+            <article class="book">
+              <h3 class="title"></h3>
+              <p class="summary"></p>
+              <a class="detailLink">
+                <div class="coverWrapper">
+                  <img class="coverImage" id="coverIMG">
+                </div>
+              </a>
+              <p class="authors"></p>
+              <p class="id"></p>
+              <p class="publisher"></p>
+              <p class="genres"></p>
+              <p class="languages"></p>
+              <p class="note"></p>
+            </article>
+        </div>
+      </section>
+
+      <section data-route="books" id="/src/#books">
+        <h2> Boeken </h2>
+        <div id="books">
+            <article class="book">
+              <h3 class="title"></h3>
+              <a class="detailLink">
+                <div class="coverWrapper">
+                  <img class="coverImage" id="coverIMG">
+                </div>
+              </a>
+            </article>
+        </div>
+      </section>
+
+      <section data-route="detail" id="/src/#detail">
+        <h2> Individual profile </h2>
+        <div id="detail">
+          <article class="student">
+          </article>
+        </div>
+      </section>
+    </div>
+    <!--
     <div class="sectionWrapper">
       <section data-route="/" id="/src/" class="active">
         <h2> Overview </h2>

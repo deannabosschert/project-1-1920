@@ -1,6 +1,7 @@
 import {
-  render
-} from "./render.js"
+  Data
+} from "./data.js"
+// public="76f45dfa187d66be5fd6af05573eab04" secret="2cb15758acac08d6ebe6f5ac7a293d69" description="OBA_api_5"
 
 const cors = 'https://cors-anywhere.herokuapp.com/';
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
@@ -14,19 +15,51 @@ const config = {
   Authorization: `Bearer ${secretKey}`
 };
 
-function getData() {
-  fetch(url, config)
-    .then(res => {
-      return res.json()
-    })
-    .then(data => {
-      render(data)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+const apiGet = {
+  overview: () => {
+    fetch(url, config)
+      .then(res => {
+        return res.json()
+      })
+      .then(json => {
+        const data = json.results
+        console.log('overviewdatadata from API loaded, now storing')
+        Data.store('overview', data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  books: () => {
+    fetch(url, config)
+      .then(res => {
+        return res.json()
+      })
+      .then(json => {
+        const data = json.results
+        console.log('bookdata from API loaded, now storing')
+        Data.store('books', data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  detail: () => {
+    fetch(url, config)
+      .then(res => {
+        return res.json()
+      })
+      .then(json => {
+        const data = json.results
+        console.log('detaildata from API loaded, now storing')
+        Data.store('detail', data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 }
 
 export {
-  getData
+  apiGet
 }
