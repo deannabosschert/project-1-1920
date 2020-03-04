@@ -40,7 +40,7 @@ section[data-route="/"]:active {
   z-index: 5;
 }
 
-section[data-route="boeken"]:active {
+section[data-route="books"]:active {
   position: absolute;
   z-index: 5;
 }

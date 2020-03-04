@@ -12,7 +12,8 @@ const Render = {
       publisher: data.publisher,
       genres: data.genres,
       languages: data.languages,
-      note: data.note
+      note: data.note,
+      linkToProfile: "Link to profile:" + data.id
     }))
 
     const directives = {
@@ -29,6 +30,11 @@ const Render = {
           return this.detailLink
         }
       },
+      linkToProfile: {
+        href: function() {
+          return "#/" + this.id
+        }
+      }
     }
     Transparency.render(view, dataList, directives)
   },
@@ -38,7 +44,9 @@ const Render = {
     const dataList = data.map(data => ({
       title: data.titles[0],
       coverImage: data.coverimages[0],
+      id: data.id,
       detailLink: data.detailLink,
+      linkToProfile: "Link to profile:" + data.id
     }))
 
     const directives = {
@@ -55,27 +63,30 @@ const Render = {
           return this.detailLink
         }
       },
+      linkToProfile: {
+        href: function() {
+          return "#/" + this.id
+        }
+      }
     }
     Transparency.render(view, dataList, directives)
   },
   detail: (data) => {
-    const view = document.getElementById("detail")
+    console.log('detailrendering gaande')
+    const view = document.getElementById("detailPage")
     // const view = document.getElementById(`"${route}"`)
     const dataList = data.map(data => ({
       title: data.titles[0],
-      coverImage: data.coverimages[0],
       detailLink: data.detailLink,
+      authors: data.authors,
+      id: data.id,
+      publisher: data.publisher,
+      genres: data.genres,
+      languages: data.languages,
+      note: data.note
     }))
 
     const directives = {
-      coverImage: {
-        src: function() {
-          return this.coverImage
-        },
-        href: function() {
-          return this.coverImage
-        }
-      },
       detailLink: {
         href: function() {
           return this.detailLink
