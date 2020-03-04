@@ -1,6 +1,5 @@
 const Render = {
   overview: (data) => {
-    console.log("rendering overview data")
     const view = document.getElementById("overview")
     const dataList = data.map(data => ({
       title: data.titles[0],
@@ -40,7 +39,6 @@ const Render = {
   },
   books: (data) => {
     const view = document.getElementById("book")
-    // const view = document.getElementById(`"${route}"`)
     const dataList = data.map(data => ({
       title: data.titles[0],
       coverImage: data.coverimages[0],
@@ -72,9 +70,7 @@ const Render = {
     Transparency.render(view, dataList, directives)
   },
   detail: (data) => {
-    console.log('detailrendering gaande')
     const view = document.getElementById("detailPage")
-    // const view = document.getElementById(`"${route}"`)
     const dataList = data.map(data => ({
       title: data.titles[0],
       detailLink: data.detailLink,
