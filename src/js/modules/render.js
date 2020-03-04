@@ -1,19 +1,19 @@
 const Render = {
-  overview: function(books) {
+  overview: (data) => {
     console.log("rendering overview data")
-    console.log(books)
     const view = document.getElementById("overview")
-    const bookList = books.map(book => ({
-      title: book.titles[0],
-      summary: book.summaries,
-      coverImage: book.coverimages[0],
-      detailLink: book.detailLink,
-      authors: book.authors,
-      id: book.id,
-      publisher: book.publisher,
-      genres: book.genres,
-      languages: book.languages,
-      note: book.note
+    const dataList = data.map(data => ({
+      title: data.titles[0],
+      summary: data.summaries,
+      coverImage: data.coverimages[0],
+      detailLink: data.detailLink,
+      authors: data.authors,
+      id: data.id,
+      publisher: data.publisher,
+      genres: data.genres,
+      languages: data.languages,
+      note: data.note,
+      linkToProfile: "Link to profile:" + data.id
     }))
 
     const directives = {
@@ -30,16 +30,23 @@ const Render = {
           return this.detailLink
         }
       },
+      linkToProfile: {
+        href: function() {
+          return "#/" + this.id
+        }
+      }
     }
-    Transparency.render(view, bookList, directives)
+    Transparency.render(view, dataList, directives)
   },
-  books: function(books) {
-    const view = document.getElementById("books")
+  books: (data) => {
+    const view = document.getElementById("book")
     // const view = document.getElementById(`"${route}"`)
-    const bookList = books.map(book => ({
-      title: book.titles[0],
-      coverImage: book.coverimages[0],
-      detailLink: book.detailLink,
+    const dataList = data.map(data => ({
+      title: data.titles[0],
+      coverImage: data.coverimages[0],
+      id: data.id,
+      detailLink: data.detailLink,
+      linkToProfile: "Link to profile:" + data.id
     }))
 
     const directives = {
@@ -56,11 +63,39 @@ const Render = {
           return this.detailLink
         }
       },
+      linkToProfile: {
+        href: function() {
+          return "#/" + this.id
+        }
+      }
     }
-    Transparency.render(view, bookList, directives)
+    Transparency.render(view, dataList, directives)
+  },
+  detail: (data) => {
+    console.log('detailrendering gaande')
+    const view = document.getElementById("detailPage")
+    // const view = document.getElementById(`"${route}"`)
+    const dataList = data.map(data => ({
+      title: data.titles[0],
+      detailLink: data.detailLink,
+      authors: data.authors,
+      id: data.id,
+      publisher: data.publisher,
+      genres: data.genres,
+      languages: data.languages,
+      note: data.note
+    }))
+
+    const directives = {
+      detailLink: {
+        href: function() {
+          return this.detailLink
+        }
+      },
+    }
+    Transparency.render(view, dataList, directives)
   }
 }
-
 
 export {
   Render

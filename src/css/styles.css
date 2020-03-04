@@ -44,7 +44,7 @@ section[data-route="books"]:active {
   position: absolute;
   z-index: 5;
 }
-section[data-route="profile"]:active {
+section[data-route="detail"]:active {
   position: absolute;
   z-index: 5;
 }
