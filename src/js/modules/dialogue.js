@@ -1,8 +1,5 @@
 const Dialogue = {
   question1: () => {
-
-    console.log('test')
-
     const updateButton = document.getElementById('updateDetails');
     const favDialog = document.getElementById('favDialog');
     const outputBox = document.querySelector('output');
@@ -14,7 +11,7 @@ const Dialogue = {
       if (typeof favDialog.showModal === "function") {
         favDialog.showModal();
       } else {
-        alert("The <dialog> API is not supported by this browser");
+        alert("Werkstukmaatje is helaas niet beschikbaar in deze browser. Probeer het eens in Chrome?");
       }
     });
     // "Favorite animal" input sets the value of the submit button
