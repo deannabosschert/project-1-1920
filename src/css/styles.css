@@ -23,11 +23,8 @@ main {
 }
 
 section {
-
-}
-
-section {
   opacity: 0;
+  z-index: -5;
   margin: 0.5rem;
   /* display: flex; */
   /* background-color: light grey; */
@@ -36,17 +33,16 @@ section {
 }
 
 section[data-route="/"]:active {
-  position: absolute;
-  z-index: 5;
+}
+
+section[data-route="overview"]:active {
 }
 
 section[data-route="books"]:active {
-  position: absolute;
-  z-index: 5;
+
 }
 section[data-route="detail"]:active {
-  position: absolute;
-  z-index: 5;
+
 }
 
 article {
@@ -94,6 +90,7 @@ img {
 
 .active {
   opacity: 1;
+  z-index: 5;
 }
 
 section:hover #naald{
