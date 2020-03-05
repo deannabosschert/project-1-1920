@@ -49,7 +49,7 @@ Create an (/ a part of) online paper-assistent that assists with choosing source
 - [ ] Second item
 
 ## 📋 Concept
-_What does your app do, what is the goal? (passing butter)_ 
+_What does your app do, what is the goal? (passing butter)_
 This is an online paper-assistent that assists with choosing sources (media carriers), based on the OBA-API. It's a child-friendly environment in which you can develop yourself with filter, sort and insights in your personal environment.
 
 ## ⚙️ Installation
@@ -62,7 +62,7 @@ Then, navigate to this folder and run:
 ```bash
 python -m SimpleHTTPServer 8000`
 ```
-, or: 
+, or:
 
 ```bash
 npm install
@@ -85,11 +85,11 @@ npm install
 
 ## 🧑🏼‍ Actor Diagram
 _Which actors are there in your application? (actor diagram)_
-![actor diagram](https://github.com/deannabosschert/template/blob/master/src/img/actordiagram.png)
+![actor diagram](https://github.com/deannabosschert/project-1-1920/blob/master/src/img/actordiagram.png)
 
 ## ↔️ Interaction diagram
 _How does flowed interaction through the application? (interaction diagram)_
-![interaction diagram](https://github.com/deannabosschert/template/blob/master/src/img/interactiondiagram.png)
+![interaction diagram](https://github.com/deannabosschert/project-1-1920/blob/master/src/img/interactiondiagram.png)
 
 ## 🌍 Design patterns
 
@@ -103,7 +103,7 @@ _How does flowed interaction through the application? (interaction diagram)_
 - ^ also helps with 'closing' a feature, so you are more likely to move on to the next. Too little time, too much ideas.
 - Commit early, commit often.
 - Make single-purpose commits.
-- Always fix your .gitignore-contents asap; node_modules or the like won't ever be pushed that way. 
+- Always fix your .gitignore-contents asap; node_modules or the like won't ever be pushed that way.
 - Styling comes last. It's gonna change anyways so most of the time, it's better to fix the technical stuff first.
 - Don't use declarations in the global scope.
 - Start your project with writing down the future function names (pre-actors, basically).
@@ -120,7 +120,7 @@ _How does flowed interaction through the application? (interaction diagram)_
 ## 🗃 Data
 
 ### 🐒 API
-_What external data source is featured in your project and what are its properties?_ 
+_What external data source is featured in your project and what are its properties?_
 
 Somethingsomething
 
@@ -139,7 +139,7 @@ outcome:
 ```
 
 ## 👯🏿‍ Features (+ wishlist)
-_What would you like to add (feature wishlist / backlog)?_ 
+_What would you like to add (feature wishlist / backlog)?_
 
 - [x] one thing
 - [ ] second something
@@ -149,7 +149,7 @@ _What would you like to add (feature wishlist / backlog)?_
 ## 🏫 Assignment
 <details>
   <summary></strong> (click to expand)</summary>
-  
+
 ## Take a look inside the collection of the Openbare Bibliotheek Amsterdam
 The project is based at the 'Centrale OBA'. The kickoff started at monday, followed by the presentations of the results on friday. In this week, every student in this course will build a prototype that visitors can use to help them find items from the OBA-collection.
 
@@ -176,8 +176,8 @@ Goal: xxx
 
 ### Rubric
 
-[Rubric- detailed rating of my project](https://github.com/deannabosschert/template/wiki/Rubric)
-![rubric](https://github.com/deannabosschert/template/blob/master/src/img/rubric.png)
+[Rubric- detailed rating of my project](https://github.com/deannabosschert/project-1-1920/wiki/Rubric)
+![rubric](https://github.com/deannabosschert/project-1-1920/blob/master/src/img/rubric.png)
 
 ## ℹ️ Resources
 
@@ -194,4 +194,3 @@ Goal: xxx
 
 Author: [Deanna Bosschert](https://github.com/deannabosschert) , license by
 [MIT](https://github.com/deannabosschert/web-app-from-scratch-1920/blob/master/LICENSE)
-
