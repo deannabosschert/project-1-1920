@@ -11,22 +11,27 @@
 </head>
 
 <body>
-  <header id="top">
+  <header class="header" id="top">
     <h1>openbare bibliotheek amsterdam</h1>
     <h2>werkstukassistent</h2>
   </header>
-  <main>
-    <ul>
-      <li><a href="#/">Home</a></li>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#books">Books</a></li>
-      <li><a href="#detail">Detail</a></li>
-    </ul>
+  <ul class="sidebar">
+    <li><a href="#/">Home</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#detail">Detail</a></li>
+  </ul>
+  <main class="main">
     <div class="sectionWrapper">
-      <section data-route="/" id="/src/" class="active">
-
-        <!-- Simple pop-up dialog box containing a form -->
-        <h2> Werkstukhelper </h2>
+      <section class="obaRobot">
+        <img class="robot" src="img/robot.png">
+        <h3>Oba-robot</h3>
+        <h4>Hoi, ik ben de OBA-robot en ik ga jou helpen bij het maken van een werkstuk</h4>
+      </section>
+      <section class="section" data-route="/" id="/src/" class="active">
+        <menu>
+          <button class="button" id="updateDetails">Begin met je werkstuk</button>
+        </menu>
         <dialog id="favDialog">
           <form method="dialog">
             <p><label>Favorite animal:
@@ -38,20 +43,16 @@
                 </select>
               </label></p>
             <menu>
-              <button value="cancel">Cancel</button>
-              <button id="confirmBtn" value="default">Confirm</button>
+              <button class="button" value="cancel">Cancel</button>
+              <button class="button" id="confirmBtn" value="default">Confirm</button>
             </menu>
           </form>
         </dialog>
-
-        <menu>
-          <button id="updateDetails">Voer in</button>
-        </menu>
         <output></output>
       </section>
 
 
-      <section data-route="overview" id="/src/#overview">
+      <section class="section" data-route="overview" id="/src/#overview">
         <h2> Overviewdingen </h2>
         <div id="overview">
           <article class="book">
@@ -73,7 +74,7 @@
         </div>
       </section>
 
-      <section data-route="books" id="/src/#books">
+      <section class="section" data-route="books" id="/src/#books">
         <h2> Boeken </h2>
         <div id="book">
           <article class="book">
@@ -88,7 +89,7 @@
         </div>
       </section>
 
-      <section data-route="detail" id="/src/#detail">
+      <section class="section"  data-route="detail" id="/src/#detail">
         <h2> Detailpage </h2>
         <div id="detailPage">
           <article class="book">
@@ -107,6 +108,9 @@
     </div>
     <a class="backToTop" href="#top">Back to top</a>
   </main>
+  <footer class="footer">
+    <p>Prototype van HvA CMD obv de OBA-API. Nieuwe manieren van zoeken, vinden en tonen.</p>
+  </footer>
   <script src="js/modules/helpers/transparency.js"></script>
   <script src="js/modules/helpers/routie.js"></script>
   <script type="module" src="js/app.js"></script>
