@@ -10,7 +10,6 @@ const Routes = {
   handle: () => {
     routie({
       "": () => {
-        console.log('test')
         Dialogue.question1()
         updatePageUI("/")
       },
