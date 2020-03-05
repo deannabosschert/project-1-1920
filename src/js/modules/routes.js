@@ -2,11 +2,16 @@ import {
   Data
 } from "./data.js"
 
+import {
+  Dialogue
+} from "./dialogue.js"
 
 const Routes = {
   handle: () => {
     routie({
       "": () => {
+        console.log('test')
+        Dialogue.question1()
         updatePageUI("/")
       },
       overview: () => {
