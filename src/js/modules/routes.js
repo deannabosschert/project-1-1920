@@ -7,8 +7,11 @@ const Routes = {
   handle: () => {
     routie({
       "": () => {
-        Data.get("overview")
         updatePageUI("/")
+      },
+      overview: () => {
+        Data.get("overview")
+        updatePageUI("overview")
       },
       books: () => {
         Data.get("books")

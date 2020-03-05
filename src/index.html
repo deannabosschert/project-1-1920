@@ -18,12 +18,40 @@
   <main>
     <ul>
       <li><a href="#/">Home</a></li>
+      <li><a href="#overview">Overview</a></li>
       <li><a href="#books">Books</a></li>
       <li><a href="#detail">Detail</a></li>
-
     </ul>
     <div class="sectionWrapper">
       <section data-route="/" id="/src/" class="active">
+
+        <!-- Simple pop-up dialog box containing a form -->
+        <h2> Werkstukhelper </h2>
+        <dialog id="favDialog">
+          <form method="dialog">
+            <p><label>Favorite animal:
+                <select>
+                  <option></option>
+                  <option>Brine shrimp</option>
+                  <option>Red panda</option>
+                  <option>Spider monkey</option>
+                </select>
+              </label></p>
+            <menu>
+              <button value="cancel">Cancel</button>
+              <button id="confirmBtn" value="default">Confirm</button>
+            </menu>
+          </form>
+        </dialog>
+
+        <menu>
+          <button id="updateDetails">Voer in</button>
+        </menu>
+        <output></output>
+      </section>
+
+
+      <section data-route="overview" id="/src/#overview">
         <h2> Overviewdingen </h2>
         <div id="overview">
           <article class="book">
