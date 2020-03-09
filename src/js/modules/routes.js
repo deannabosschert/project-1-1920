@@ -10,9 +10,25 @@ const Routes = {
   handle: () => {
     routie({
       "": () => {
-        Dialogue.question1()
+        Dialogue.start()
         updatePageUI("/")
       },
+      // question1: () => {
+      //   Dialogue.question2()
+      //   updatePageUI("/")
+      // },
+      // question2: () => {
+      //   Dialogue.question3()
+      //   updatePageUI("/")
+      // },
+      // question3: () => {
+      //   Dialogue.question4()
+      //   updatePageUI("/")
+      // },
+      // question4: () => {
+      //   Dialogue.question5()
+      //   updatePageUI("/")
+      // },
       overview: () => {
         Data.get("overview")
         updatePageUI("overview")
